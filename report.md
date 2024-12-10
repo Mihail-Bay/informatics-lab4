@@ -163,6 +163,10 @@ sudo systemctl start docker
 ```bash
 sudo systemctl status docker
 ```
+### удаление логов
+```bash
+sudo find /var/lib/docker/containers/ -name "*.log" -exec truncate -s 0 {} \;
+```
 
 ---
 
